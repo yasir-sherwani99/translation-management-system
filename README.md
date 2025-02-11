@@ -68,8 +68,14 @@ You can run tests to verify the functionality of the translation system.
 ```bash
 php artisan test --filter=TranslationTest
 ```
-
-
+2. **Feature Tests:** Tests for the complete translation management flow (e.g., adding, searching and updating translations via API).
+```bash
+php artisan test --filter=TranslationFeatureTest
+```
+3. **Performance Tests:** Ensure the system handles bulk translations efficiently.
+```bash
+php artisan test --filter=TranslationPerformanceTest
+```
 
 
 
