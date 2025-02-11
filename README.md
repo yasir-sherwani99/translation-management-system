@@ -43,21 +43,30 @@ php artisan serve
 
 ### API Endpoints
 
-##### Authentication
+#### Authentication
 
 - **POST** /api/register: Register a new user and authenticate it.
 - **POST** /api/login: Login an existing user and retrieve an API token.
 - **GET** /api/logout: Logout an existing user and delete an API token.
 
-##### Translation
+#### Translation
 
 All translations api endpoints are secure and token is required to access it.
 
-### 1. **POST /api/translations**
+##### 1. **POST /api/translations**
 Add a new translation
+**Request**
 ```http
 POST /api/translations
 Content-Type: application/json
+```
+```json
+{
+    "word": "Hello",
+    "translation": "Hola",
+    "locale": "es",
+    "tag": "mobile"
+}
 ```
 - **PUT** /api/translations/{translation}: Update a translation.
 - **GET** /api/translations: View all translations
