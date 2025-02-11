@@ -39,6 +39,7 @@ php artisan serve
 - **CRUD Operations:** Add, update and retrieve translations through an API
 - **Search Translations:** Search translation by tags, language or content
 - **Performance:** Optimized for handling large sets of translations
+- **Testing:** Unit and featured testing for all critical functionalities including performance testing.
 
 ### API Endpoints
 
@@ -47,6 +48,17 @@ php artisan serve
 - **POST** /api/register: Register a new user and authenticate it.
 - **POST** /api/login: Login an existing user and retrieve an API token.
 - **GET** /api/logout: Logout an existing user and delete an API token.
+
+#### Translation
+
+All translations api endpoints are secure and token is required to access it.
+
+- **POST** /api/translations: Add a new translation.
+- **PUT** /api/translations/{translation}: Update a translation.
+- **GET** /api/translations: View all translations
+- **GET** /api/translations/search: Search a translation by locale, tag or contnet
+
+
 
 
 
