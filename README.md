@@ -83,7 +83,7 @@ Content-Type: application/json
     }
 }
 ```
-##### 2. **PUR /api/translations/{translation}**
+##### 2. **PUT /api/translations/{translation}**
 Update a translation<br /><br />
 **Request**
 ```http
@@ -113,7 +113,65 @@ Content-Type: application/json
     }
 }
 ```
-- **GET** /api/translations: View all translations
+##### 3. **GET /api/translations**
+View all translations<br /><br />
+**Request**
+```http
+GET /api/translations
+Content-Type: application/json
+```
+**Response**
+```json
+{
+    "success": true,
+    "translation": [
+        {
+            "id": 1,
+            "word": "Hello",
+            "translation": "Hola",
+            "locale_id": 3,
+            "tag_id": 1,
+            "created_at": "2025-02-10T18:21:30.000000Z",
+            "updated_at": "2025-02-10T18:21:30.000000Z",
+            "locale": {
+                "id": 3,
+                "code": "es",
+                "name": "Spanish",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            },
+            "tag": {
+                "id": 1,
+                "name": "mobile",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            }
+        },
+        {
+            "id": 2,
+            "word": "Welcome",
+            "translation": "Bonjure",
+            "locale_id": 2,
+            "tag_id": 1,
+            "created_at": "2025-02-10T18:21:30.000000Z",
+            "updated_at": "2025-02-10T18:21:30.000000Z",
+            "locale": {
+                "id": 2,
+                "code": "fr",
+                "name": "French",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            },
+            "tag": {
+                "id": 1,
+                "name": "mobile",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            }
+        }
+    ]
+}
+```
 - **GET** /api/translations/search: Search a translation by locale, tag or contnet
 
 ### Testing
