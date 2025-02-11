@@ -96,7 +96,20 @@ Content-Type: application/json
     }
 }
 ```
-- **GET** /api/logout: Logout an existing user and delete an API token.
+##### 3. **GET /api/logout**
+Logout an existing user and delete an API token<br /><br />
+**Request**
+```http
+GET /api/logout
+Content-Type: application/json
+```
+**Response**
+```json
+{
+    "success": true,
+    "message": "You are logged out successfully"
+}
+```
 
 #### Translation
 
