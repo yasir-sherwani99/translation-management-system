@@ -34,7 +34,21 @@ php artisan serve
 
 ### Features
 
--- **User Authentication:** Users can signup, login and logout using Laravel Sanctum
+- **User Authentication:** Users can signup, login and logout using Laravel Sanctum
+- **Multi-language Support:** Store translations for different languages (e.g. English, French, Spanish)
+- **CRUD Operations:** Add, update and retrieve translations through an API
+- **Search Translations:** Search translation by tags, language or content
+- **Performance:** Optimized for handling large sets of translations
+
+### API Endpoints
+
+#### Authentication
+
+- **POST** /api/register: Register a new user and authenticate it.
+- **POST** /api/login: Login an existing user and retrieve an API token.
+- **GET** /api/logout: Logout an existing user and delete an API token.
+
+
 
 
 
