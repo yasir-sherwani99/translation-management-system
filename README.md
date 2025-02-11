@@ -54,7 +54,7 @@ php artisan serve
 All translations api endpoints are secure and token is required to access it.
 
 ##### 1. **POST /api/translations**
-Add a new translation<br />
+Add a new translation<br /><br />
 **Request**
 ```http
 POST /api/translations
@@ -83,7 +83,36 @@ Content-Type: application/json
     }
 }
 ```
-- **PUT** /api/translations/{translation}: Update a translation.
+##### 2. **PUR /api/translations/{translation}**
+Update a translation<br /><br />
+**Request**
+```http
+PUT /api/translations/1
+Content-Type: application/json
+```
+```json
+{
+    "word": "Hello",
+    "translation": "Hello",
+    "locale": "en",
+    "tag": "web"
+}
+```
+**Response**
+```json
+{
+    "success": true,
+    "translation": {
+        "id": 1,
+        "word": "Hello",
+        "translation": "Hello",
+        "locale_id": 1,
+        "tag_id": 3,
+        "created_at": "2025-02-10T18:21:30.000000Z",
+        "updated_at": "2025-02-10T18:21:30.000000Z"
+    }
+}
+```
 - **GET** /api/translations: View all translations
 - **GET** /api/translations/search: Search a translation by locale, tag or contnet
 
