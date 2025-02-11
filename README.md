@@ -43,13 +43,13 @@ php artisan serve
 
 ### API Endpoints
 
-#### Authentication
+##### Authentication
 
 - **POST** /api/register: Register a new user and authenticate it.
 - **POST** /api/login: Login an existing user and retrieve an API token.
 - **GET** /api/logout: Logout an existing user and delete an API token.
 
-#### Translation
+##### Translation
 
 All translations api endpoints are secure and token is required to access it.
 
@@ -58,6 +58,16 @@ All translations api endpoints are secure and token is required to access it.
 - **GET** /api/translations: View all translations
 - **GET** /api/translations/search: Search a translation by locale, tag or contnet
 
+### Testing
+
+##### Running Tests
+
+You can run tests to verify the functionality of the translation system.
+
+1. **Unit Tests:** Tests for individual translation management methods e.g. (adding, retrieving translations). 
+```bash
+php artisan test --filter=TranslationTest
+```
 
 
 
