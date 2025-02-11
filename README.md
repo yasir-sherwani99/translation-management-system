@@ -2,6 +2,15 @@
 
 This is a Translation Management System built with Laravel 8. It allows users to manage translations for various text in multiple languages, providing APIs for easy integration and management of translations in a multi-language application.
 
+### Features
+
+- **User Authentication:** Users can signup, login and logout using Laravel Sanctum
+- **Multi-language Support:** Store translations for different languages (e.g. English, French, Spanish)
+- **CRUD Operations:** Add, update and retrieve translations through an API
+- **Search Translations:** Search translation by tags, language or content
+- **Performance:** Optimized for handling large sets of translations
+- **Testing:** Unit and featured testing for all critical functionalities including performance testing.
+
 ### Requirements
 
 - PHP >= 7.4
@@ -32,15 +41,6 @@ php artisan db:seed
 7. Start the Development Server<br />
 php artisan serve
 
-### Features
-
-- **User Authentication:** Users can signup, login and logout using Laravel Sanctum
-- **Multi-language Support:** Store translations for different languages (e.g. English, French, Spanish)
-- **CRUD Operations:** Add, update and retrieve translations through an API
-- **Search Translations:** Search translation by tags, language or content
-- **Performance:** Optimized for handling large sets of translations
-- **Testing:** Unit and featured testing for all critical functionalities including performance testing.
-
 ### API Endpoints
 
 ##### Authentication
@@ -53,7 +53,12 @@ php artisan serve
 
 All translations api endpoints are secure and token is required to access it.
 
-- **POST** /api/translations: Add a new translation.
+### 1. **POST /api/translations**
+Add a new translation
+```http
+POST /api/translations
+Content-Type: application/json
+```
 - **PUT** /api/translations/{translation}: Update a translation.
 - **GET** /api/translations: View all translations
 - **GET** /api/translations/search: Search a translation by locale, tag or contnet
