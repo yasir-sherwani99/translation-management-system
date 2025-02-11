@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('login', [App\Http\Controllers\AuthController::class, 'login']);
+Route::post('register', [App\Http\Controllers\AuthController::class, 'register']);
+
+Route::middleware('auth:sanctum')->group(function() {
+    Route::get('logout', [App\Http\Controllers\AuthController::class, 'logout']);
+    Route::get('translations', [App\Http\Controllers\TranslationController::class, 'index']);
+    Route::post('translations', [App\Http\Controllers\TranslationController::class, 'store']);
+    Route::put('translations/{translation}', [App\Http\Controllers\TranslationController::class, 'update']);
+    Route::get('translations/search', [App\Http\Controllers\TranslationController::class, 'search']);
 });
+
+
