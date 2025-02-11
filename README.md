@@ -45,8 +45,57 @@ php artisan serve
 
 #### Authentication
 
-- **POST** /api/register: Register a new user and authenticate it.
-- **POST** /api/login: Login an existing user and retrieve an API token.
+##### 1. **POST /api/register**
+Register a new user and authenticate it<br /><br />
+**Request**
+```http
+POST /api/register
+Content-Type: application/json
+```
+```json
+{
+    "name": "Yasir Naeem",
+    "email": "yasir.sherwani@gmail.com",
+    "password": "123456"
+}
+```
+**Response**
+```json
+{
+    "success": true,
+    "message": "Well-done! You are loggedin successfully",
+    "accessToken": "3|eCbYa1DjnHY5O2z75yPyVGj7LBcjBOHgCut8OMsC"
+}
+```
+##### 2. **POST /api/login**
+Login an existing user and retrieve an API token<br /><br />
+**Request**
+```http
+POST /api/login
+Content-Type: application/json
+```
+```json
+{
+    "email": "yasir.sherwani@gmail.com",
+    "password": "123456"
+}
+```
+**Response**
+```json
+{
+    "success": true,
+    "message": "Well-done! You are loggedin successfully",
+    "accessToken": "3|eCbYa1DjnHY5O2z75yPyVGj7LBcjBOHgCut8OMsC",
+    "user": {
+        "id": 2,
+        "name": "Yasir Naeem",
+        "email": "yasir.sherwani@gmail.com",
+        "email_verified_at": null,
+        "created_at": "2025-02-11T16:45:40.000000Z",
+        "updated_at": "2025-02-11T16:45:40.000000Z"
+    }
+}
+```
 - **GET** /api/logout: Logout an existing user and delete an API token.
 
 #### Translation
@@ -230,7 +279,7 @@ Content-Type: application/json
         }
     ]
 }
-
+```
 ### Testing
 
 ##### Running Tests
