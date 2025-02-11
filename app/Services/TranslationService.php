@@ -61,7 +61,7 @@ class TranslationService
             });
         }
 
-        $translations = $query->get();
+        $translations = $query->with(['locale', 'tag'])->get();
 
         return $translations;
     }
