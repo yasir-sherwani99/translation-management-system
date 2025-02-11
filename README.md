@@ -124,7 +124,7 @@ Content-Type: application/json
 ```json
 {
     "success": true,
-    "translation": [
+    "translations": [
         {
             "id": 1,
             "word": "Hello",
@@ -172,7 +172,64 @@ Content-Type: application/json
     ]
 }
 ```
-- **GET** /api/translations/search: Search a translation by locale, tag or contnet
+##### 4. **GET /api/translations/search**
+Search translations by tag, locale or content<br /><br />
+**Request**
+```http
+GET /api/translations/search?q=Hello&locale=en&tag=mobile
+Content-Type: application/json
+```
+**Response**
+```json
+{
+    "success": true,
+    "translations": [
+        {
+            "id": 1,
+            "word": "Hello",
+            "translation": "Hola",
+            "locale_id": 3,
+            "tag_id": 1,
+            "created_at": "2025-02-10T18:21:30.000000Z",
+            "updated_at": "2025-02-10T18:21:30.000000Z",
+            "locale": {
+                "id": 3,
+                "code": "es",
+                "name": "Spanish",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            },
+            "tag": {
+                "id": 1,
+                "name": "mobile",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            }
+        },
+        {
+            "id": 2,
+            "word": "Welcome",
+            "translation": "Bonjure",
+            "locale_id": 2,
+            "tag_id": 1,
+            "created_at": "2025-02-10T18:21:30.000000Z",
+            "updated_at": "2025-02-10T18:21:30.000000Z",
+            "locale": {
+                "id": 2,
+                "code": "fr",
+                "name": "French",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            },
+            "tag": {
+                "id": 1,
+                "name": "mobile",
+                "created_at": "2025-02-10T18:21:25.000000Z",
+                "updated_at": "2025-02-10T18:21:25.000000Z"
+            }
+        }
+    ]
+}
 
 ### Testing
 
