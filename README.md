@@ -12,7 +12,7 @@ This is a Translation Management System built with Laravel 8. It allows users to
 ### Installation
 
 1. Clone the Git Repository<br />
-git clone [https://github.com/yasir-sherwani99/translation-management-system.git] (https://github.com/yasir-sherwani99/translation-management-system.git)
+git clone https://github.com/yasir-sherwani99/translation-management-system.git
 2. Install Composer Dependencies<br />
 composer Install
 3. Setup .env<br />
@@ -31,7 +31,6 @@ php artisan migrate
 php artisan db:seed
 7. Start the Development Server<br />
 php artisan serve
-<br />
 
 ### Features
 
