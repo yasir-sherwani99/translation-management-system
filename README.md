@@ -37,19 +37,19 @@ DB_DATABASE=your_database_name<br />
 DB_USERNAME=your_database_username<br />
 DB_PASSWORD=your_database_password 
 ```
-4. Generate an application key<br />
+4. Generate an Application Key
 ```bash
 php artisan key:generate
 ```
-5. Migrate the Database<br />
+5. Migrate the Database
 ```bash
 php artisan migrate
 ```
-6. Seed the Database<br />
+6. Seed the Database
 ```bash
 php artisan db:seed
 ```
-7. Start the Development Server<br />
+7. Start the Development Server
 ```bash
 php artisan serve
 ```
