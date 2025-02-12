@@ -21,19 +21,23 @@ This is a Translation Management System built with Laravel 8. It allows users to
 ### Installation
 
 1. Clone the Git Repository<br />
+```bash
 git clone https://github.com/yasir-sherwani99/translation-management-system.git
+```
 2. Install Composer Dependencies<br />
 ```bash
 composer Install
 ```
 3. Setup .env<br />
-Duplicate the .env.example file and rename it to .env<br /><br />
+Duplicate the .env.example file and rename it to .env<br />
+```bash
 DB_CONNECTION=mysql<br />
 DB_HOST=127.0.0.1<br />
 DB_PORT=3306<br />
 DB_DATABASE=your_database_name<br />
 DB_USERNAME=your_database_username<br />
-DB_PASSWORD=your_database_password <br />
+DB_PASSWORD=your_database_password 
+```
 4. Generate an application key<br />
 ```bash
 php artisan key:generate
